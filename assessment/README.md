@@ -1,6 +1,6 @@
 
 ## Instructions to Start
-Within the assesments Directory run 
+cd into assesments Directory then run 
 ## npm install
 then run 
 ## npm start 
