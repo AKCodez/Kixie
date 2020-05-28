@@ -2,7 +2,7 @@ import React from "react";
 import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 import { useEffect, useState } from "react";
 import allDeals from "./allDeals";
-
+import Container from './components/container'
 const App = (props) => {
   let [tableData, setTableData] = useState([]);
   const data_people = {
@@ -27,27 +27,7 @@ const App = (props) => {
         field: "lost",
         sort: "dsc",
       },
-    ],
-    rows: [
-      {
-        Name: "Jeff Kuei",
-        Open: 0,
-        Won: 1,
-        Lost: "2",
-      },
-      {
-        Name: "Jeff Kuei",
-        Open: "0",
-        Won: "1",
-        Lost: "2",
-      },
-      {
-        Name: "Jeff Kuei",
-        Open: "0",
-        Won: "1",
-        Lost: "2",
-      },
-    ],
+    ]
   };
 
   useEffect(() => {
@@ -82,13 +62,22 @@ const App = (props) => {
         },
       ]);
     }
+  
   }, []);
 
   return (
+    <div>
+
+    <div>
+      <Container data={tableData}/>
+    </div>
+    <div>
     <MDBTable align="center" style={{maxWidth: '80vw'}} responsiveSm striped>
       <MDBTableHead columns={data_people.columns} />
       <MDBTableBody rows={tableData.sort((a, b) => b.Open - a.Open)} />
-    </MDBTable>
+    </MDBTable> 
+    </div>
+    </div>
   );
 };
 
