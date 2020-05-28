@@ -15,6 +15,9 @@ function Container(props) {
   const [keys, setKeys] = useState(allKeys);
   return (
     <React.Fragment>
+      <br />
+      <br />
+      <br />
       <h2>Deals LeaderBoard  </h2>
       <StackedBarChart data={props.data} keys={keys} colors={colors} />
 
