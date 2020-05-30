@@ -14,6 +14,15 @@ const colors = {
 function Container(props) {
   const [keys, setKeys] = useState(allKeys);
   return (
+    <div>
+      <br />
+      <br/>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     <React.Fragment>
       <br />
       <br />
@@ -35,7 +44,7 @@ function Container(props) {
                   setKeys(keys.filter(_key => _key !== key));
                 }
               }}
-            />
+              />
             <label htmlFor={key} style={{ color: colors[key] }}>
               {key}
             </label>
@@ -43,6 +52,7 @@ function Container(props) {
         ))}
       </div>
     </React.Fragment>
+        </div>
   );
 }
 
